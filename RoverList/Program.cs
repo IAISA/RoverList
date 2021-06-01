@@ -12,6 +12,73 @@ namespace RoverList
         {
             RoverList<string> list = new RoverList<string>();
 
+            list.Add("studying");
+            list.Add("stressed");
+            list.Add("city");
+            list.Add("birthday");
+            list.Add("school");
+            list.Add("work");
+            list.Add("basketball");
+            list.Add("trampoline");
+            list.Add("pizza");
+            list.Add("milkshake");
+            list.Add("homework");
+            list.Add("research");
+            list.Add("calculus");
+            list.Add("summer");
+            list.Add("college");
+            list.Add("coding");
+
+            list.ListNodes();
+
+            Console.WriteLine("Please enter some words:");
+            while(true)
+            {
+
+                Console.Write("> ");
+
+                string line = Console.ReadLine();
+                if (line == "done")
+                    break;
+
+                list.Add(line);
+            }
+            Console.WriteLine("");
+
+            list.ListNodes();
+
+            Console.WriteLine("");
+            Console.WriteLine("Please enter some more words:");
+            while (true)
+            {
+                Console.Write("> ");
+
+                string line = Console.ReadLine();
+                if (line == "done")
+                    break;
+
+                list.Add(0, line);
+            }
+            Console.WriteLine("");
+
+            list.ListNodes();
+
+            Console.WriteLine("");
+            Console.WriteLine("Now I will remove all odd words");
+            Console.WriteLine("");
+
+            list.DeleteOddWord();
+
+            Console.WriteLine("");
+            list.ListNodes();
+
+            Console.WriteLine("");
+            Console.WriteLine("Now I will clear the list");
+
+            list.Clear();
+
+            list.ListNodes();
+
             // TODO:  Implement the RoverList class
             // TODO:  Create a RoverList and then fill it with 16 words
 

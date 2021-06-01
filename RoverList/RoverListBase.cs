@@ -12,11 +12,12 @@ namespace RoverList
         public class Node
         {
             public T Data { get; set; }
-            public Node Next;
+            public Node Next { get; set; }
 
-            public Node (T data)
+            public Node (T data, Node next)
             {
                 this.Data = data;
+                this.Next = next; 
             }
         }
 
