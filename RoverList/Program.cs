@@ -67,7 +67,17 @@ namespace RoverList
             Console.WriteLine("Now I will remove all odd words");
             Console.WriteLine("");
 
-            list.DeleteOddWord();
+            int count = list.Count - 1;
+            while (count >= 0)
+            {
+                var word = list.ElementAt(count);
+
+                if(word.Length % 2 != 0)
+                {
+                    list.RemoveAt(count);
+                }
+                count--;
+            }
 
             Console.WriteLine("");
             list.ListNodes();
